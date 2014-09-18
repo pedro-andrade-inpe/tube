@@ -4,8 +4,9 @@ require("tube")
 -- @name scenario2
 -- @class variable
 scenario2 = Tube{
-	simulationSteps = 30
+	initialWater = 250,
+	flow = 25
 }
 
-scenario2:execute(20)
+scenario2:execute(30)
 

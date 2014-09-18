@@ -4,10 +4,9 @@ require("tube")
 -- @name scenario4
 -- @class variable
 scenario4 = Tube{
-	simulationSteps = 30,
 	checkZero = true,
 	observingStep = 0.1
 }
 
-scenario4:execute(20)
+scenario4:execute(30)
 
