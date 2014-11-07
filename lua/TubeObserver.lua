@@ -1,6 +1,7 @@
 
 --- Type to observe the simulation
 -- @param model.cell A TubeCell.
+-- @usage TubeObserver{cell = cell}
 function TubeObserver(model)
 	Observer{
 		subject     = model.cell,

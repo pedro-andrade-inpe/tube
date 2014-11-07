@@ -1,11 +1,10 @@
 
--- Water in the Tube model. It contains a TubeCell, a TubeTimer, and a TubeObserver.
--- @class function
--- @param numRuns Number of simulation steps of the model.
--- @param initialWater Initial amount of water in the tube.
--- @param flow Amount of water that flows out of the tube.
--- @param observingStep Time interval to observe the amount of water along the simulation.
--- @param checkZero Deny having a negative amount of water in the model.
+--- Water in the Tube model. It contains a TubeCell, a TubeTimer, and a TubeObserver.
+-- @param data.numRuns Number of simulation steps of the model.
+-- @param data.initialWater Initial amount of water in the tube.
+-- @param data.flow Amount of water that flows out of the tube.
+-- @param data.observingStep Time interval to observe the amount of water along the simulation.
+-- @param data.checkZero Deny having a negative amount of water in the model.
 Tube = Model{
 	initialWater    = 200,           
 	flow            = 20,
