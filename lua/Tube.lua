@@ -16,9 +16,9 @@ Tube = Model{
 		TubeObserver(model)
 	end,
 	check = function(model)
-		assert(model.flow > 0, "Flow should be greater than zero")
-		assert(model.initialWater > 0, "Initial water should be greater than zero")
-		assert(model.observingStep > 0, "Observing step should be greater than zero")
+		verify(model.flow > 0, "Flow should be greater than zero.")
+		verify(model.initialWater > 0, "Initial water should be greater than zero.")
+		verify(model.observingStep > 0, "Observing step should be greater than zero.")
 	end
 }
 
