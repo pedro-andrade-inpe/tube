@@ -1,5 +1,6 @@
 version = "0.2"
 package = "tube"
+license = "GPL"
 title = "Water in the Tube"
 date = "7 November 2014"
 authors = "Pedro R. Andrade"
