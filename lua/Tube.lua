@@ -6,19 +6,18 @@
 -- @arg data.observingStep Time interval to observe the amount of water along the simulation.
 -- @arg data.checkZero Deny having a negative amount of water in the model.
 Tube = Model{
-	initialWater    = 200,           
-	flow            = 20,
-	observingStep   = 1,
+	initialWater    = choice{min = 10, default = 200},
+	finalTime       = choice{min = 1, default = 10},
+	flow            = choice{min = 1, default = 20},
+	observingStep   = choice{min = 0.1, max = 1, step = 0.1, default = 1},
 	checkZero       = false,
-	setup = function(model)
+	init = function(model)
 		model.cell  = TubeCell(model)
 		model.timer = TubeTimer(model)
-		TubeObserver(model)
+		model.chart = TubeChart(model)
 	end,
-	check = function(model)
-		verify(model.flow > 0, "Flow should be greater than zero.")
-		verify(model.initialWater > 0, "Initial water should be greater than zero.")
-		verify(model.observingStep > 0, "Observing step should be greater than zero.")
+	interface = function()
+		return {{"choice", "boolean"}}
 	end
 }
 

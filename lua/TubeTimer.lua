@@ -4,12 +4,13 @@
 -- @arg model.cell A TubeCell that stores water.
 -- @usage TubeTimer{cell = cell, observingStep = 2}
 function TubeTimer(model)
+	if model.observingStep == 1 then model.observingStep = nil end
 	return Timer{
 		Event{action = function(event)
 			model.cell:execute()			
 		end},
 		Event{time = 0, period = model.observingStep, action = function(e)
-			model.cell:notify(e:getTime())
+			model.cell:notify(e)
 		end}
 	}
 end

@@ -1,5 +1,4 @@
 
-
 return {
 	Tube = function(unitTest)
 
@@ -7,7 +6,6 @@ return {
 			t = Tube{flow = -1}
 		end
 
-		unitTest:assert_error(error_func, "Flow should be greater than zero.")
-
+		unitTest:assert_error(error_func, "Argument 'flow' should be greater than or equal to 1.")
 	end
 }
