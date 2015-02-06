@@ -1,7 +1,7 @@
 
 --- Create a timer for the Tube model.
--- @param model.observingStep Time interval for observing the model execution.
--- @param model.cell A TubeCell that stores water.
+-- @arg model.observingStep Time interval for observing the model execution.
+-- @arg model.cell A TubeCell that stores water.
 -- @usage TubeTimer{cell = cell, observingStep = 2}
 function TubeTimer(model)
 	return Timer{

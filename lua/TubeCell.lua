@@ -1,8 +1,8 @@
 
 --- Represent a tube.
--- @param model.initialWater The initial amount of water in the tube.
--- @param model.checkZero Avoid less than zero units of water in the tube?
--- @param model.flow The amount of water that flows out of the tube.
+-- @arg model.initialWater The initial amount of water in the tube.
+-- @arg model.checkZero Avoid less than zero units of water in the tube?
+-- @arg model.flow The amount of water that flows out of the tube.
 -- @usage cell = TubeCell{initialWater = 10, flow = 5, checkZero = false}
 function TubeCell(model)
 	local cell = Cell{
