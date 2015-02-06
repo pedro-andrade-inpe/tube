@@ -1,11 +1,10 @@
 require("tube")
 
---- Simulation of a Tube along 30 time steps verifying whether the water is less than zero.
--- @name scenario3
--- @class variable
+--@example Simulation of a Tube along 30 time steps verifying whether the water is less than zero.
 scenario3 = Tube{
-	checkZero = true
+	checkZero = true,
+	finalTime = 30
 }
 
-scenario3:execute(30)
+scenario3:execute()
 
