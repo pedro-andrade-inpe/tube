@@ -1,5 +1,5 @@
 
---- Type to observe the simulation
+--- Type to observe the simulation.
 -- @arg model.cell A TubeCell.
 -- @usage TubeChart{cell = cell}
 function TubeChart(model)
