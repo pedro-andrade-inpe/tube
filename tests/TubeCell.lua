@@ -7,8 +7,8 @@ return{
 			flow = 7
 		}
 
-		unitTest:assert_type(cell, "Cell")
-		unitTest:assert_type(cell.execute, "function")
+		unitTest:assertType(cell, "Cell")
+		unitTest:assertType(cell.execute, "function")
 	end,
 	execute = function(unitTest)
 		local cell = TubeCell{
@@ -18,10 +18,10 @@ return{
 		}
 
 		cell:execute()
-		unitTest:assert_equal(cell.water, 3)
+		unitTest:assertEquals(cell.water, 3)
 
 		cell:execute()
-		unitTest:assert_equal(cell.water, 0)
+		unitTest:assertEquals(cell.water, 0)
 
 		cell = TubeCell{
 			initialWater = 5,
@@ -30,7 +30,7 @@ return{
 		}
 
 		cell:execute()
-		unitTest:assert_equal(cell.water, -2)
+		unitTest:assertEquals(cell.water, -2)
 	end
 }
 

@@ -5,8 +5,8 @@ return{
 			observingStep = 1
 		}
 
-		unitTest:assert_type(timer, "Timer")
-		unitTest:assert_nil(timer.observingStep)
+		unitTest:assertType(timer, "Timer")
+		unitTest:assertNil(timer.observingStep)
 	end
 }
 

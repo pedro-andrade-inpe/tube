@@ -5,7 +5,7 @@ return{
 
 		local c = TubeChart(model)
 
-		unitTest:assert_type(c, "Chart")
+		unitTest:assertType(c, "Chart")
 	end
 }
 
