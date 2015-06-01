@@ -11,10 +11,8 @@ Tube = Model{
 	flow            = Choice{min = 1, default = 20},
 	observingStep   = Choice{min = 0.1, max = 1, step = 0.1, default = 1},
 	checkZero       = false,
-	check = function(model)
-		verify(model.flow < model.initialWater, toLabel("flow").." should be less than "..toLabel("initialWater")..".")
-	end,
 	init = function(model)
+		verify(model.flow < model.initialWater, toLabel("flow").." should be less than "..toLabel("initialWater")..".")
 		model.cell  = TubeCell(model)
 		model.timer = TubeTimer(model)
 		model.chart = TubeChart(model)

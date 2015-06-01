@@ -4,7 +4,7 @@
 -- @usage TubeChart{cell = cell}
 function TubeChart(model)
 	return Chart{
-		subject = model.cell,
+		target = model.cell,
 		select  = "water",
 		yLabel  = "liters"
 	} 

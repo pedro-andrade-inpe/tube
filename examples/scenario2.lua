@@ -1,4 +1,4 @@
-require("tube")
+import("tube")
 
 --@example Simulation of a Tube along 30 time steps.
 scenario2 = Tube{

@@ -9,7 +9,7 @@ function TubeTimer(model)
 		Event{action = function(event)
 			model.cell:execute()			
 		end},
-		Event{time = 0, period = model.observingStep, action = function(e)
+		Event{start = 0, period = model.observingStep, action = function(e)
 			model.cell:notify(e)
 		end}
 	}
